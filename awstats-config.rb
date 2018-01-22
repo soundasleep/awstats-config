@@ -14,7 +14,7 @@ EOF
 def awstats_config(domains, var_www)
   [false, true].each do |vhost|
     domains.each do |domain|
-      filename = "awstats.#{domain}#{vhost ? ".vhost" : "").conf"
+      filename = "awstats.#{domain}#{vhost ? ".vhost" : "")}.conf"
 
       puts "--> Writing #{filename}..."
 
