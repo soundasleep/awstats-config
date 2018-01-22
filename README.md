@@ -2,6 +2,14 @@
 
 Generate sensible awstats configurations for many domains at once.
 
+## Requirements
+
+This adds the `ipv6` plugin to awstats. For this to work, you need to install the Perl modules:
+
+```bash
+apt-get install -V libnet-ip-perl libnet-dns-perl
+```
+
 ## To use
 
 Create a `config.rb` script with contents like this:
