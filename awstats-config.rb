@@ -23,7 +23,7 @@ def awstats_config(domains, var_www)
       content = File.read("awstats.conf")
 
       to_replace = {
-        "LogFile" => "\"/usr/share/awstats/tools/logresolvemerge.pl /var/log/apache2/other_vhosts_access.log /var/log/apache2/other_vhosts_access.log.* |\"",
+        "LogFile" => "\"/usr/share/awstats/tools/logresolvemerge.pl /var/log/apache2/*access.log /var/log/apache2/*access.log.* |\"",
         "LogFormat" => "\"%virtualname %host %other %logname %time1 %methodurl %code %bytesd %refererquot %uaquot\"",
         "SiteDomain" => "\"#{domain}\"",
         "HostAliases" => "\"www.#{domain} #{domain}:80 #{domain}:443 www.#{domain}:80 www.#{domain}:443\"",
